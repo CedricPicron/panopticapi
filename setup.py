@@ -1,12 +1,12 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
-from setuptools import setup, Extension
+from setuptools import find_packages, setup
 
 setup(
     name='panopticapi',
-    packages=['panopticapi'],
-    package_dir = {'panopticapi': 'panopticapi'},
+    packages=find_packages(),
+    package_dir={'panopticapi': 'panopticapi'},
     install_requires=[
         'numpy',
         'Pillow',
