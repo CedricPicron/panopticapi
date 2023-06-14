@@ -117,7 +117,7 @@ def convert_panoptic_to_detection_coco_format(input_json_file,
         if things_only and category['isthing'] != 1:
             continue
         category.pop('isthing')
-        category.pop('color')
+        category.pop('color', None)
         categories_coco_detection.append(category)
     d_coco['categories'] = categories_coco_detection
     save_json(d_coco, output_json_file)
